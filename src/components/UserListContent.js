@@ -4,9 +4,13 @@ import { usePlanetsQuery } from '../hooks/usePlanetsQuery'
 import { getPlanetDetails } from '../utils/getPlanetDetails'
 import { UserListItem } from './UserListItem'
 import { UserSkeletonLoader } from './UserSkeletonLoader'
-import { ErrorFetch } from './ErrorFetch'
+import { Error } from './Error'
 import { ApplicationContext } from '../hooks/useAppContextUtils'
 import { useContext } from 'react'
+import {
+  ERROR_USER_NOT_FOUND,
+  ERROR_INVALID_CREDENTIALS,
+} from './ErrorMessages.js'
 
 export const UserListContent = () => {
   const { sortColumnName } = useContext(ApplicationContext)
@@ -19,11 +23,15 @@ export const UserListContent = () => {
   const { data: orderedData } = useDataWithOrdering()
 
   if (isPeopleError) {
-    return <ErrorFetch />
+    return <Error text={ERROR_INVALID_CREDENTIALS} />
   }
 
   if (isPeopleLoading || (sortColumnName && !orderedData && peopleData)) {
     return <UserSkeletonLoader />
+  }
+
+  if (peopleData?.noDataFound) {
+    return <Error text={ERROR_USER_NOT_FOUND} />
   }
 
   if (orderedData?.length > 0) {

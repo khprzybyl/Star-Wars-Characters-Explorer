@@ -10,6 +10,14 @@ export const usePeopleQuery = () => {
     queryKey: ['people', page, search],
     queryFn: async () => await fetchPeople({ page, search }),
     select: ({ results, count }) => {
+        if (!results || results.length === 0) {
+          return {
+            count: 0,
+            people: [],
+            planetApiUrls: [],
+            noDataFound: true,
+          }
+        }
       return {
         count,
         people: results,

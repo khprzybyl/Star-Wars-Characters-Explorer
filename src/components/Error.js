@@ -1,10 +1,10 @@
 import YodaImage from '../assets/images/yoda.png'
-import './ErrorFetch.css'
+import './Error.css'
 
-export const ErrorFetch = () => {
+export const Error = ({text}) => {
   return (
     <div className="error-fetch">
-      <p>Even Yoda couldn’t foresee this error. Please try again later.</p>
+      <p>{text}</p>
       <img
         src={YodaImage}
         alt="Yoda sad, Yoda failed"
