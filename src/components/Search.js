@@ -2,7 +2,6 @@ import React from 'react'
 import { useContext } from 'react'
 import { ApplicationContext } from '../hooks/useAppContextUtils'
 import './Search.css'
-import { usePeopleQuery } from '../hooks/usePeopleQuery'
 
 export const Search = ({ onFilter }) => {
   const { search, handleSearch } = useContext(ApplicationContext)
