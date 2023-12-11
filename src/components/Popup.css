@@ -1,0 +1,84 @@
+.popup-progress {
+  display: flex;
+  animation:spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(24, 24, 33, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255, 1);
+}
+
+.popup-inner {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 20px 2px rgb(20, 20, 20, 1);
+    background-color: rgba(51, 52, 64, 1);
+}
+.popup-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 30px 30px 10px 30px;
+    border-radius:  10px 10px 0 0;
+}
+
+.popup-header h2 {
+    font-size: 15px;
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 30px 30px 30px;
+    border-radius: 0 0 10px 10px;
+}
+.popup-content p {
+    min-width: 15vh;
+    text-align: left;
+    display:flex;
+    justify-content: flex-start;
+}
+
+.popup-content-row {
+    display: flex;
+}
+
+.popup-content-row p:first-child {
+    font-weight: 700;
+}
+
+.btn-close {
+    color: rgb(0, 0, 0, 1);
+    background-color: transparent;
+    cursor: pointer;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+}
+
+.btn-close:hover {
+    border: 1px solid rgba(255, 255, 0, 1);
+    border-radius: 5px;
+    padding: 3px;
+}

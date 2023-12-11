@@ -1,0 +1,33 @@
+.user-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 15px;
+  font-size: 13px;
+  line-height: 17px;
+  width: 100%;
+  gap: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.user-container .name {
+  font-size: 15px;
+  flex: 1.7;
+  font-weight: 600;
+  text-align: left;
+}
+
+.user-container p {
+  flex: 1;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.user-container:last-child {
+  border-radius: 0 0 10px 10px;
+}
+
+.btn-planet {
+  padding: 10px 0;
+  flex: 1;
+}
