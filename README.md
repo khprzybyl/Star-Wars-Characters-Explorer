@@ -81,4 +81,3 @@ Created by
 
 Katarzyna Przybył 
 khprzybyl@gmail.com
-+48 605 300 172
