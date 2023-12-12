@@ -12,6 +12,7 @@ export const Search = ({ onFilter }) => {
 
   return (
     <div className="search">
+      <h1>Star Wars Characters Explorer</h1>
       <input
         type="search"
         placeholder="Search by name"
