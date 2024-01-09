@@ -19,13 +19,13 @@ export const Popup = ({ planet, togglePopup }) => {
 
         <section className="popup-content">
           <div className="popup-content-row">
-            <p>Diameter:</p> <p> {planet?.diameter}</p>
+            <p>Diameter:</p> <p>{planet?.diameter}</p>
           </div>
           <div className="popup-content-row">
-            <p>Climate: </p> <p>{planet?.climate}</p>
+            <p>Climate:</p> <p>{planet?.climate}</p>
           </div>
           <div className="popup-content-row">
-            <p>Population:</p> <p> {planet?.population}</p>
+            <p>Population:</p> <p>{planet?.population}</p>
           </div>
         </section>
       </div>

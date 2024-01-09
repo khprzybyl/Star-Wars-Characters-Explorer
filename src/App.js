@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useRef } from 'react'
 import { UserList } from './components/UserList.js'
 import { Search } from './components/Search.js'
 import { Footer } from './components/Footer.js'
